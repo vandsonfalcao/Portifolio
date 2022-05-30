@@ -9,29 +9,16 @@ export const GlobalStyle = createGlobalStyle`
   /*----------------------------Variaveis-------------------------*/
   :root {
 		// Colors
-		--primary-blue:   	#171846;
-		--secondary-blue: 	#1b315e;
-		--primary-red:    	#931813;
-		--secondary-red:  	#ff0a00;
+		--black: 		rgb(7, 28, 33);
+		--dark-blue:	rgb(21, 59, 68);
+		--blue: 			rgb(45, 110, 126);
+		--green:			rgb(198, 222, 65);
+		
+		--grey:			rgb(238, 238, 238);
 
-		--footer:         	#706f6f;
-		--footer-line:   	rgba(255,255,255,.1);
-		--line:           	#dfe9eb;
-
-		--white:          	#ffffff;
-		--white-90:       	#f9f8f8;
-		--white-70:       	#f6f3ed;
-		--white-60:       	#f4f6f5;
-		--white-50:       	#f2f4f5;
-
-		--danger:         	#CB2026;
-		--success:        	#0dc143;
-		--warning:        	#f4bf00;
-
-		--input-text:		#495057;
-		--default-text:  	#505050;
-		--default-title:  	#111111;
-		--link:           	#21a7d0;
+		// Fonts
+		--f-title: 		'Raleway', sans-serif;
+		--f-text:		'Nunito', sans-serif;
   }
   html{
 	scroll-behavior: smooth;
@@ -49,12 +36,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   /*-------------------------------------------------------------*/
   body {
-		color: var(--default-text);
-		font-family: 'Rubik', sans-serif;
+	  background: var(--black);
+		font-family: var(--f-text);
 		font-weight: 400;
 		vertical-align: baseline;
-		line-height: 26px;
-		color: var(--default-text);
+		line-height: 1.8;
 		-webkit-font-smoothing: antialiased;
 		overflow-x: hidden;
   }
@@ -68,8 +54,7 @@ export const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-		font-family: 'Nunito', sans-serif;
-		color: var(--default-title);
+		font-family: var(--f-title);
 		margin: 0 0 26px;
 		line-height: 1.2;
   }
@@ -85,22 +70,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-		color: var(--link);
 		text-decoration: none;
   }
 
-  // Class
-  .linkCTA {
-		display: inline-block;
-		color: var(--white);
-		background: var(--primary-red);
-		border-radius: 4px;
-		padding: 12px 40px;
-		text-transform: uppercase;
-		font-weight: 700;
-		transition: all 0.3s ease;
-		&:hover {
-			background: var(--primary-blue);
-		}
-  }
+  // Global Classes
 `;
