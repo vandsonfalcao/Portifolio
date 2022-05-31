@@ -9,8 +9,8 @@ export const Container = styled.div`
 	> div {
 		padding: 1px;
 		position: absolute;
-		box-shadow: 0px 0px 15px #fff;
+		box-shadow: 0px 0px 15px var(--purple);
 		border-radius: 100%;
-		background: #fff;
+		background: var(--purple);
 	}
 `;

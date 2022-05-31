@@ -9,12 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   /*----------------------------Variaveis-------------------------*/
   :root {
 		// Colors
-		--black: 		rgb(7, 28, 33);
-		--dark-blue:	rgb(21, 59, 68);
-		--blue: 			rgb(45, 110, 126);
-		--green:			rgb(198, 222, 65);
-		
-		--grey:			rgb(238, 238, 238);
+		--white: 		rgb(247, 247, 247);
+		--teal:			rgb(67, 216, 201);
+		--purple: 		rgb(149, 56, 158);
+		--black:			rgb(16, 3, 3);
 
 		// Fonts
 		--f-title: 		'Raleway', sans-serif;
@@ -36,7 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   /*-------------------------------------------------------------*/
   body {
-	  background: var(--black);
+	  	background: var(--white);
+		color: var(--black);
 		font-family: var(--f-text);
 		font-weight: 400;
 		vertical-align: baseline;
