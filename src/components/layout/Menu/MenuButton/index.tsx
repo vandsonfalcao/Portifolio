@@ -1,5 +1,5 @@
 // Modules
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 // Style
 import { Button, Container, Text } from "./style";
@@ -7,14 +7,14 @@ import { Button, Container, Text } from "./style";
 // Interfaces
 interface MenuButtonProps {
 	active: boolean;
+	setActive: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function MenuButton({ active }: MenuButtonProps) {
-	const [isActive, setIsActive] = useState(active);
+export default function MenuButton({ active, setActive }: MenuButtonProps) {
 	return (
-		<Container onClick={() => setIsActive((prev) => !prev)}>
+		<Container onClick={() => setActive(!active)}>
 			<div>
-				<Text className={isActive ? "active" : ""}>
+				<Text className={active ? "active" : ""}>
 					<div>
 						<span>Menu</span>
 					</div>
@@ -24,7 +24,7 @@ export default function MenuButton({ active }: MenuButtonProps) {
 				</Text>
 			</div>
 			<div>
-				<Button className={isActive ? "active" : ""}>
+				<Button className={active ? "active" : ""}>
 					<div className="tp"></div>
 					<div className="md"></div>
 					<div className="bt"></div>

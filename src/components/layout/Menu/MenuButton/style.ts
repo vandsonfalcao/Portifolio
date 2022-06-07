@@ -39,7 +39,7 @@ export const Text = styled.div`
 				opacity: 0;
 			}
 			&:last-child {
-				transform: translateX(80px);
+				transform: translateX(70px);
 				opacity: 1;
 			}
 		}
