@@ -10,7 +10,7 @@ export const MenuBar = styled.nav`
 		position: absolute;
 		display: flex;
 		align-items: center;
-		padding: 0 10%;
+		padding: 0 5%;
 		width: 100%;
 		height: 65px;
 		display: flex;

@@ -20,17 +20,28 @@ const Home: NextPage = () => {
 						padding: "62px",
 					}}
 				>
-					<h2 style={{ fontSize: "2.5rem", fontWeight: 400 }}>
-						Seja Bem-vindo ao meu portifólio,
-					</h2>
-					<h1 style={{ fontSize: "5rem" }}>
-						Me chamo <span className="gradiente-color">Vandson Falcão</span>, sou{" "}
-						<span className="gradiente-color">desenvolvedor</span> de aplicações web.
-					</h1>
-					<br />
-					<div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-						<div style={{ fontSize: '2.5rem', lineHeight: 1, opacity: .4 }}>
-							<BsChevronDoubleDown />
+					<div
+						style={{
+							width: "100%",
+							height: "100%",
+							display: "flex",
+							flexDirection: "column",
+							justifyContent: "center",
+						}}
+					>
+						<h2 style={{ fontSize: "1.25rem", fontWeight: 400 }}>
+							Seja Bem-vindo ao meu portifólio,
+						</h2>
+						<h1 style={{ fontSize: "3.5rem" }}>
+							Me chamo <span className="gradiente-color">Vandson Falcão</span>, sou{" "}
+							<span className="gradiente-color">desenvolvedor</span> de aplicações
+							web.
+						</h1>
+						<br />
+						<div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+							<div style={{ fontSize: "1.5rem", lineHeight: 1, opacity: 0.4 }}>
+								<BsChevronDoubleDown />
+							</div>
 						</div>
 					</div>
 				</ResponsiveContainer>
