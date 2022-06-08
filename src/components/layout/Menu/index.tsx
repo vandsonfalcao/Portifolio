@@ -1,6 +1,5 @@
 // Modules
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 // Style
 import { MenuBar, MenuModal } from "./style";
@@ -14,44 +13,35 @@ export function Menu() {
 	const itemMenus = [
 		{
 			text: "Apresentação",
+			link: "#",
 		},
 		{
 			text: "Carreira",
+			link: "#",
 		},
 		{
 			text: "Habilidades",
+			link: "#",
 		},
 		{
 			text: "Blog",
+			link: "#",
 		},
 	];
 	return (
 		<MenuBar>
-			<section>
+			<section className="responsive-container">
 				<MenuButton active={isOpen} setActive={setIsOpen} />
 			</section>
 			<MenuModal className={isOpen ? "active" : ""}>
-				<div>
-					{isOpen &&
-						itemMenus.map((menu, key) => (
-							<motion.div
-								initial={
-									key % 2 === 0 ? { opacity: 0, x: -100 } : { opacity: 0, x: 100 }
-								}
-								animate={
-									isOpen && {
-										opacity: 1,
-										x: key % 2 === 0 ? 50 : -50,
-										transition: { delay: 1, duration: 0.8 },
-									}
-								}
-								key={key}
-							>
-								<Link href={"#"}>
-									<a>{menu.text}</a>
-								</Link>
-							</motion.div>
-						))}
+				<div className="responsive-container">
+					{itemMenus.map((menu, key) => (
+						<div key={key} className={isOpen ? "active" : ""}>
+							<Link href={menu.link}>
+								<a>{menu.text}</a>
+							</Link>
+						</div>
+					))}
 				</div>
 			</MenuModal>
 		</MenuBar>

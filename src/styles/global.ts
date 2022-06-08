@@ -73,6 +73,24 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   // Global Classes
+  .responsive-container{
+		position: relative;
+		flex: 0 1270px;
+		max-width: 1270px;
+		padding: 0 1rem;
+		@media screen and (max-width: 1366px) {
+			max-width: 1170px;
+		}
+		@media screen and (max-width: 1199px) {
+			max-width: 960px;
+		}
+		@media screen and (max-width: 991px) {
+			max-width: 720px;
+		}
+		@media screen and (max-width: 767px) {
+			max-width: 540px;
+		}
+  }
   .gradiente-color{
 	position: relative;
 	background-image: linear-gradient(55deg, rgba(67,216,201,1) 0%, rgba(149,56,158,1) 100%);

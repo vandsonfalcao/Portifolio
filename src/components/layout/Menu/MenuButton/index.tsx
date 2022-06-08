@@ -1,5 +1,5 @@
 // Modules
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 
 // Style
 import { Button, Container, Text } from "./style";

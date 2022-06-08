@@ -4,27 +4,52 @@ export const MenuBar = styled.nav`
 	z-index: 99;
 	width: 100%;
 	position: fixed;
+	display: flex;
+	justify-content: center;
 	top: 0;
 	left: 0;
 	> section {
 		position: absolute;
 		display: flex;
 		align-items: center;
-		padding: 0 5%;
+		justify-content: flex-end;
 		width: 100%;
 		height: 65px;
-		display: flex;
-		justify-content: flex-end;
+	}
+	@media screen and (min-width: 991px) {
+		> section {
+			display: none;
+		}
 	}
 `;
 
 export const MenuModal = styled.aside`
+	// desktop web
+	@media screen and (min-width: 991px) {
+		background: none;
+		height: auto !important;
+		opacity: 1 !important;
+		> div {
+			flex-direction: row !important;
+			> div {
+				display: unset !important;
+				opacity: 1 !important;
+				animation: unset !important;
+				padding: 1rem 0;
+				> a {
+					font-size: 1.25rem !important;
+				}
+			}
+		}
+	}
 	position: absolute;
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	height: 0vh;
 	opacity: 0;
-	transition: all ease 0.8s;
-	background: var(--white);
+	transition: height ease 0.8s, opacity ease-in-out 0.6s;
+	background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.1), var(--white) 20%);
 	&.active {
 		height: 100vh;
 		opacity: 0.98;
@@ -38,6 +63,39 @@ export const MenuModal = styled.aside`
 		align-items: center;
 		gap: 2rem;
 		> div {
+			display: none;
+			opacity: 0;
+			&.active {
+				display: unset;
+			}
+			&:nth-child(odd) {
+				animation: impar-menu forwards 0.8s;
+				animation-delay: 0.8s;
+			}
+			&:nth-child(even) {
+				animation: par-menu forwards 0.8s;
+				animation-delay: 0.8s;
+			}
+			@keyframes impar-menu {
+				0% {
+					opacity: 0;
+					transform: translateX(-100px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateX(50px);
+				}
+			}
+			@keyframes par-menu {
+				0% {
+					opacity: 0;
+					transform: translateX(+100px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateX(-50px);
+				}
+			}
 			> a {
 				font-size: 2.5rem;
 				font-family: var(--f-title);
