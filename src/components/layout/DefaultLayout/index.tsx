@@ -7,6 +7,7 @@ import { Container } from "./style";
 // Components
 import { Menu } from "../Menu";
 import Stars from "../../Stars";
+import { Footer } from "../Footer";
 
 // Interfaces
 interface DefaultLayoutProps {
@@ -18,7 +19,8 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 			<Menu />
 			<Stars />
 			{children}
-			<footer>teste</footer>
+			<div style={{ width: '100%', height: '300px', background: 'var(--purple)' }} />
+			<Footer />
 		</Container>
 	);
 }

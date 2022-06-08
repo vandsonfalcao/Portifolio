@@ -1,10 +1,13 @@
+// Modules
 import type { NextPage } from "next";
 import Head from "next/head";
+
+// Components
 import { DefaultLayout } from "../components/layout/DefaultLayout";
-import { ResponsiveContainer } from "../components/ResponsiveContainer";
 
 // Icons
 import { BsChevronDoubleDown } from "react-icons/bs";
+
 const Home: NextPage = () => {
 	return (
 		<>
@@ -12,7 +15,7 @@ const Home: NextPage = () => {
 				<title>Vandson Falcão · Portfólio</title>
 			</Head>
 			<DefaultLayout>
-				<ResponsiveContainer
+				<div className="responsive-container"
 					style={{
 						height: "100vh",
 						display: "flex",
@@ -44,7 +47,7 @@ const Home: NextPage = () => {
 							</div>
 						</div>
 					</div>
-				</ResponsiveContainer>
+				</div>
 			</DefaultLayout>
 		</>
 	);
