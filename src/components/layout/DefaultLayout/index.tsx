@@ -19,7 +19,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 			<Menu />
 			<Stars />
 			{children}
-			<div style={{ width: '100%', height: '300px', background: 'var(--purple)' }} />
+			<div style={{ width: "100%", height: "300px", background: "var(--purple)" }} />
 			<Footer />
 		</Container>
 	);
