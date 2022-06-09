@@ -13,7 +13,7 @@ export function Menu() {
 	const itemMenus = [
 		{
 			text: "Apresentação",
-			link: "#",
+			link: "#teste",
 		},
 		{
 			text: "Carreira",
@@ -38,7 +38,7 @@ export function Menu() {
 					{itemMenus.map((menu, key) => (
 						<div key={key} className={isOpen ? "active" : ""}>
 							<Link href={menu.link}>
-								<a>{menu.text}</a>
+								<a onClick={() => setIsOpen(!isOpen)}>{menu.text}</a>
 							</Link>
 						</div>
 					))}

@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   html{
 	scroll-behavior: smooth;
   }
+
   /*----------------------------Media----------------------------*/
   @media (max-width: 1080px) {
 		html {

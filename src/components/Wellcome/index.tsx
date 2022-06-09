@@ -1,5 +1,5 @@
 // Modules
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Style
 import { Container } from "./style";

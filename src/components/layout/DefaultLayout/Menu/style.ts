@@ -48,8 +48,8 @@ export const MenuModal = styled.aside`
 	width: 100%;
 	height: 0vh;
 	opacity: 0;
-	transition: height ease 0.8s, opacity ease-in-out 0.6s;
-	background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.1), var(--white) 20%);
+	transition: height ease .4s, opacity ease-in-out 1s;
+	background: linear-gradient(0deg, rgba(16,3,3,0.7301120277212447) 0%, rgba(227,227,227,1) 35%);
 	&.active {
 		height: 100vh;
 		opacity: 0.98;
