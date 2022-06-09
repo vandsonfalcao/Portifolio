@@ -5,9 +5,9 @@ import { ReactNode } from "react";
 import { Container } from "./style";
 
 // Components
-import { Menu } from "../Menu";
+import { Menu } from "./Menu";
 import Stars from "../../Stars";
-import { Footer } from "../Footer";
+import { Footer } from "./Footer";
 
 // Interfaces
 interface DefaultLayoutProps {
@@ -19,7 +19,6 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 			<Menu />
 			<Stars />
 			{children}
-			<div style={{ width: "100%", height: "300px", background: "var(--purple)" }} />
 			<Footer />
 		</Container>
 	);

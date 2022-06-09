@@ -74,6 +74,15 @@ export const GlobalStyle = createGlobalStyle`
 
   // Global Classes
   .responsive-container{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	padding: 62px;
+	@media screen and (max-width: 767px) {
+		padding: 0;
+		}
+  }
+  .responsive-content{
 		position: relative;
 		flex: 0 1270px;
 		max-width: 1270px;
@@ -98,7 +107,6 @@ export const GlobalStyle = createGlobalStyle`
 	-webkit-background-clip: text;
 	
 	color: transparent;
-	transition: all ease-in-out 2s;
 	&::before {
 		content: "";
 		position: absolute;

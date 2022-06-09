@@ -15,7 +15,7 @@ export function Footer() {
 	}, []);
 	return (
 		<Container className={isVisible ? "active" : ""}>
-			<div className="responsive-container">
+			<div className="responsive-content">
 				<span>Copyright © 2022 - Todos os direitos reservados</span>
 			</div>
 		</Container>

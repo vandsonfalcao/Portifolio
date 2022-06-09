@@ -30,11 +30,11 @@ export function Menu() {
 	];
 	return (
 		<MenuBar>
-			<section className="responsive-container">
+			<section className="responsive-content">
 				<MenuButton active={isOpen} setActive={setIsOpen} />
 			</section>
 			<MenuModal className={isOpen ? "active" : ""}>
-				<div className="responsive-container">
+				<div className="responsive-content">
 					{itemMenus.map((menu, key) => (
 						<div key={key} className={isOpen ? "active" : ""}>
 							<Link href={menu.link}>
