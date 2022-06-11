@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	align-items: center;
+	height: 100vh;
 	> div {
 		width: 100%;
 		height: 100%;
 		display: flex;
+		justify-content: flex-start;
 		flex-direction: column;
 		text-align: center;
 		h1 {
@@ -19,9 +21,12 @@ export const Container = styled.div`
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			flex: 1;
+			&:first-child {
+				flex: 0 70vh;
+				align-items: center;
+			}
 			&:last-child {
-				flex: 0 10%;
+				flex: 0 10vh;
 				align-items: center;
 			}
 

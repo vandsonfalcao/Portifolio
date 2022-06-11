@@ -13,15 +13,15 @@ export function Menu() {
 	const itemMenus = [
 		{
 			text: "Apresentação",
-			link: "#teste",
+			link: "#apresentacao",
 		},
 		{
 			text: "Carreira",
-			link: "#",
+			link: "#carreira",
 		},
 		{
 			text: "Habilidades",
-			link: "#",
+			link: "#habilidades",
 		},
 		{
 			text: "Blog",
@@ -30,6 +30,7 @@ export function Menu() {
 	];
 	return (
 		<MenuBar>
+			! in development...
 			<section className="responsive-content">
 				<MenuButton active={isOpen} setActive={setIsOpen} />
 			</section>

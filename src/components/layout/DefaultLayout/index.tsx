@@ -17,7 +17,6 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 	return (
 		<Container>
 			<Menu />
-			<Stars />
 			{children}
 			<Footer />
 		</Container>

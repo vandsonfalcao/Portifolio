@@ -77,8 +77,8 @@ export const GlobalStyle = createGlobalStyle`
   .responsive-container{
 	display: flex;
 	justify-content: center;
-	height: 100vh;
 	padding: 62px;
+	border: solid red 3px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
 		}
