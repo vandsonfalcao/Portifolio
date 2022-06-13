@@ -6,7 +6,6 @@ import { Container } from "./style";
 
 // Components
 import { Menu } from "./Menu";
-import Stars from "../../Stars";
 import { Footer } from "./Footer";
 
 // Interfaces
@@ -17,7 +16,9 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 	return (
 		<Container>
 			<Menu />
-			{children}
+			<main>
+				<div>{children}</div>
+			</main>
 			<Footer />
 		</Container>
 	);

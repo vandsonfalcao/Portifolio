@@ -30,7 +30,7 @@ export function Menu() {
 	];
 	return (
 		<MenuBar>
-			! in development...
+			in development...
 			<section className="responsive-content">
 				<MenuButton active={isOpen} setActive={setIsOpen} />
 			</section>

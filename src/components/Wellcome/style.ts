@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-	align-items: center;
-	height: 100vh;
 	> div {
 		width: 100%;
 		height: 100%;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: center;
 		flex-direction: column;
 		text-align: center;
 		h1 {
 			font-size: 3rem;
+			transition-property: opacity, transform;
+			transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+			transition-duration: 1s ,2s;
 		}
 		h2 {
 			font-size: 1.25rem;
 			font-weight: 400;
+			transition: all ease .8s;
 		}
 		> div {
 			display: flex;

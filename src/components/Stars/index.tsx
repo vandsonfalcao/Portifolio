@@ -1,10 +1,21 @@
 // Modules
-import { motion, Variants } from "framer-motion";
+import { motion, useTransform, useViewportScroll, Variants } from "framer-motion";
 
 // Style
 import { Container } from "./style";
 
 export default function Stars() {
+	const { scrollYProgress } = useViewportScroll();
+	const colorBg = useTransform(
+		scrollYProgress,
+		[0.1, 0.105, 0.8, 1],
+		["#f7f7f7", "#100303", "#100303", "#f7f7f7"]
+	);
+	const colorStars = useTransform(
+		scrollYProgress,
+		[0.1, 0.105, 0.8, 1],
+		["#95389e", "#43d8c9", "#43d8c9", "#95389e"]
+	);
 	const star: Variants = {
 		visible: (i) => ({
 			opacity: [0, 0, 1, 0.5, 1, 0, 0],
@@ -23,7 +34,12 @@ export default function Stars() {
 		},
 	};
 	return (
-		<Container>
+		<Container
+			as={motion.div}
+			style={{
+				background: colorBg,
+			}}
+		>
 			{[
 				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -35,6 +51,7 @@ export default function Stars() {
 			].map((key) => (
 				<motion.div
 					key={key}
+					style={{ background: colorStars }}
 					custom={Math.floor(Math.random() * 9)}
 					variants={star}
 					animate={"visible"}

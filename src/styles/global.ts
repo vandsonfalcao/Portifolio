@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
   /*----------------------------Variaveis-------------------------*/
   :root {
 		// Colors
-		--white: 		rgb(247, 247, 247);
-		--teal:			rgb(67, 216, 201);
-		--purple: 		rgb(149, 56, 158);
-		--black:			rgb(16, 3, 3);
+		--white: 		rgb(247, 247, 247); //#f7f7f7
+		--teal:			rgb(67, 216, 201); //#43d8c9
+		--purple: 		rgb(149, 56, 158); // #95389e
+		--black:			rgb(16, 3, 3); //#100303
 
 		// Fonts
 		--f-title: 		'Raleway', sans-serif;
@@ -75,10 +75,13 @@ export const GlobalStyle = createGlobalStyle`
 
   // Global Classes
   .responsive-container{
+	position: absolute;
 	display: flex;
 	justify-content: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	padding: 62px;
-	border: solid red 3px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
 		}

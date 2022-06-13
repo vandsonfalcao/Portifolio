@@ -6,6 +6,7 @@ export const Container = styled.div`
 	height: 100%;
 	position: absolute;
 	overflow: hidden;
+	transition: all ease-in-out 1s;
 	> div {
 		padding: 1px;
 		position: absolute;

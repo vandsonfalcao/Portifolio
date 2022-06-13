@@ -9,7 +9,6 @@ export const MenuBar = styled.nav`
 	justify-content: center;
 	top: 0;
 	left: 0;
-	border: solid white 1px;
 	> section {
 		position: absolute;
 		display: flex;
