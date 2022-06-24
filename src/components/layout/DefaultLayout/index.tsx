@@ -16,9 +16,7 @@ export function DefaultLayout({ children }: DefaultLayoutProps) {
 	return (
 		<Container>
 			<Menu />
-			<main>
-				<div>{children}</div>
-			</main>
+			{children}
 			<Footer />
 		</Container>
 	);

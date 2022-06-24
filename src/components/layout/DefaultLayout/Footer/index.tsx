@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Container } from "./style";
 
 export function Footer() {
-	const [isVisible, setIsVisible] = useState(false);
+	const [isVisible, setIsVisible] = useState(true);
 	useEffect(() => {
 		typeof window !== "undefined" &&
 			window.addEventListener("scroll", () => {

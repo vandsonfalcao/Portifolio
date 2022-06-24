@@ -75,18 +75,16 @@ export const GlobalStyle = createGlobalStyle`
 
   // Global Classes
   .responsive-container{
-	position: absolute;
 	display: flex;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
 	overflow: hidden;
 	padding: 62px;
+	border: solid red 1px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
-		}
-  }
-  .responsive-content{
+	}
+}
+.responsive-content{
 		position: relative;
 		flex: 0 1270px;
 		max-width: 1270px;

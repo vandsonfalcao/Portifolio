@@ -37,7 +37,7 @@ export default function Stars() {
 		<Container
 			as={motion.div}
 			style={{
-				background: colorBg,
+				// background: colorBg,
 			}}
 		>
 			{[
@@ -51,7 +51,7 @@ export default function Stars() {
 			].map((key) => (
 				<motion.div
 					key={key}
-					style={{ background: colorStars }}
+					// style={{ background: colorStars }}
 					custom={Math.floor(Math.random() * 9)}
 					variants={star}
 					animate={"visible"}
