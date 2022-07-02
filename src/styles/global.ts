@@ -79,7 +79,6 @@ export const GlobalStyle = createGlobalStyle`
 	justify-content: center;
 	overflow: hidden;
 	padding: 62px;
-	border: solid red 1px;
 	@media screen and (max-width: 767px) {
 		padding: 0;
 	}
