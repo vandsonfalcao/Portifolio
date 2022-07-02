@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	width: 100%;
-	/* border: solid red 1px; */
 	> div {
 		display: flex;
 		flex-direction: column;
@@ -30,19 +29,30 @@ export const Container = styled.div`
 		}
 		> main {
 			// Mobile
-			@media screen and (max-width: 991px){
+			@media screen and (max-width: 991px) {
 				flex-direction: column;
-				>div{
+				> div {
 					flex: 1 !important;
-					border-left: solid var(--purple) 1px;
+					border-left: solid var(--purple) 3px !important;
 					border-right: none !important;
 					align-items: flex-start !important;
-					*{
+					padding: 10rem 1rem !important;
+					&:first-child {
+						padding: 0rem 1rem 10rem 1rem !important;
+						>div{
+							top: 0 !important;
+						}
+					}
+					* {
 						text-align: left !important;
 					}
-					>div{
-						margin-left: -.67rem;
+					> div {
+						margin-left: -0.68rem;
+						top: 10.125rem !important;
 						left: 0;
+					}
+					&.empty {
+						padding: 0 !important;
 					}
 				}
 			}
@@ -52,12 +62,19 @@ export const Container = styled.div`
 				flex: 0 0 50%;
 				display: flex;
 				flex-direction: column;
-				padding: 2rem 1rem;
+
+				padding: 6rem 1rem;
 				position: relative;
-				>div {
+				&:first-child {
+					padding: 0 1rem 6rem 1rem;
+					> div {
+						top: 0;
+					}
+				}
+				> div {
 					position: absolute;
 					z-index: 1;
-					top: 2.125rem;
+					top: 6.125rem;
 					width: 20px;
 					height: 20px;
 					background: var(--white);
@@ -75,34 +92,34 @@ export const Container = styled.div`
 					display: block;
 					color: #666;
 				}
-				>span{
+				> span {
 					margin: 1rem 0;
 					color: var(--white);
 					font-weight: 800;
-					font-size: .75rem;
-					padding: .125rem .5rem;
+					font-size: 0.75rem;
+					padding: 0.125rem 0.5rem;
 					background: var(--purple);
 					border-radius: 20px;
 				}
-				&:nth-child(odd){
-					border-right: solid var(--purple) .5px;
+				&:nth-child(odd) {
+					border-right: solid var(--purple) 0.5px;
 					align-items: flex-end;
-					*{
+					* {
 						text-align: right;
 					}
-					>div{
-						margin-right: -.67rem;
+					> div {
+						margin-right: -0.67rem;
 						right: 0;
 					}
 				}
-				&:nth-child(even){
-					border-left: solid var(--purple) .5px;
+				&:nth-child(even) {
+					border-left: solid var(--purple) 0.5px;
 					align-items: flex-start;
-					*{
+					* {
 						text-align: left;
 					}
-					>div{
-						margin-left: -.67rem;
+					> div {
+						margin-left: -0.67rem;
 						left: 0;
 					}
 				}
