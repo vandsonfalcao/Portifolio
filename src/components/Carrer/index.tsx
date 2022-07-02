@@ -1,5 +1,8 @@
 // Modules
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import HistoryPoint from "./HistoryPoint";
 
 // Style
 import { Container } from "./style";
@@ -52,7 +55,7 @@ export default function Carrer() {
 		},
 	];
 	return (
-		<Container className="responsive-container">
+		<Container className="responsive-container" id="carreira">
 			<div className="responsive-content">
 				<header>
 					<span>Educação e Expêriencia</span>
@@ -65,23 +68,7 @@ export default function Carrer() {
 				</header>
 				<main>
 					{data.map((item, key) => (
-						<>
-							<div key={key}>
-								<div></div>
-								<h3>{item.title}</h3>
-								<p>
-									<strong>{item.place}</strong>
-								</p>
-								<span>{item.time}</span>
-								<p>{item.desc}</p>
-							</div>
-							{(key + 2) % 2 === 0 && (
-								<>
-									<div className="empty"></div>
-									{!(key + 2 > data.length) && <div className="empty"></div>}
-								</>
-							)}
-						</>
+						<HistoryPoint key={key} ident={key} item={item} length={data.length} />
 					))}
 				</main>
 			</div>

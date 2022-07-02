@@ -36,19 +36,13 @@ export const Container = styled.div`
 					border-left: solid var(--purple) 3px !important;
 					border-right: none !important;
 					align-items: flex-start !important;
-					padding: 10rem 1rem !important;
-					&:first-child {
-						padding: 0rem 1rem 10rem 1rem !important;
-						>div{
-							top: 0 !important;
-						}
-					}
+					min-height: unset !important;
+					padding-bottom: 15rem !important;
 					* {
 						text-align: left !important;
 					}
 					> div {
-						margin-left: -0.68rem;
-						top: 10.125rem !important;
+						margin-left: -0.8rem;
 						left: 0;
 					}
 					&.empty {
@@ -62,11 +56,10 @@ export const Container = styled.div`
 				flex: 0 0 50%;
 				display: flex;
 				flex-direction: column;
-
-				padding: 6rem 1rem;
+				padding: 0 2rem 6rem 2rem;
+				min-height: 80vh;
 				position: relative;
 				&:first-child {
-					padding: 0 1rem 6rem 1rem;
 					> div {
 						top: 0;
 					}
@@ -74,7 +67,7 @@ export const Container = styled.div`
 				> div {
 					position: absolute;
 					z-index: 1;
-					top: 6.125rem;
+					top: 0.125rem;
 					width: 20px;
 					height: 20px;
 					background: var(--white);
