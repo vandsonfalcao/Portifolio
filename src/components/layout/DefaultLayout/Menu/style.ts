@@ -27,7 +27,7 @@ export const MenuBar = styled.nav`
 export const MenuModal = styled.aside`
 	// desktop web
 	@media screen and (min-width: 991px) {
-		background: none;
+		background: linear-gradient(180deg, rgba(247,247,247,1) 85%, transparent 100%);
 		height: auto !important;
 		opacity: 1 !important;
 		> div {
