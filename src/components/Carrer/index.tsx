@@ -1,13 +1,8 @@
 // Modules
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
 import HistoryPoint from "./HistoryPoint";
 
 // Style
 import { Container } from "./style";
-
-// Icons
 
 export default function Carrer() {
 	const data = [
@@ -33,12 +28,12 @@ export default function Carrer() {
 			title: "Técnico em Manutenção e Suporte em Informática",
 			place: "CEPEP - Centro de Estudo e Pesqu. em Educação Profissional",
 			time: "2015 - 2017",
-			desc: "Manutenção e programação de computadores.",
+			desc: "Desenvolver programas, projetar, desenhar, executar, gerir, instalar, inspecionar, realizar manutenção e acompanhar o desenvolvimento de serviços de microinformática:  instalações físicas, redes, hardwares e periféricos, sistemas operacionais, banco de dados e softwares comerciais e para internet. Ler e interpretar manuais e outros documentos em Lígua inglesa. Agir de acordo com valores éticos e legais, respeitando sempre o meio ambiente, a qualidade e a segurança no trabalho. Prestar assitências em serviços mais complexos, ministrar treinamentos e assistir a compra e venda de materiais da área de Microinformática.",
 		},
 		{
 			title: "ReactJS",
 			place: "Rocketseat",
-			time: "2020 - cursando",
+			time: "2020 & Atualmente",
 			desc: "Framework ReactJS, styled-components, HTML5, SASS, EcmaScript 6, NextJS, TypeScript e mais.",
 		},
 		{
@@ -50,7 +45,7 @@ export default function Carrer() {
 		{
 			title: "Desenvolvedor WEB",
 			place: "INBEC | Fortaleza-CE",
-			time: "2022 - Atualmente",
+			time: "2022",
 			desc: "Manutenção de aplicações legado e implementação de novas features e aplicações, NextJS(React) e Laravel(PHP).",
 		},
 	];

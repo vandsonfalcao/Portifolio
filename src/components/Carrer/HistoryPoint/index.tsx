@@ -1,5 +1,5 @@
 // Modules
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // Interfaces
@@ -18,7 +18,6 @@ interface HistoryPointProps {
 export default function HistoryPoint({ item, ident, length }: HistoryPointProps) {
 	// Animations
 	const { ref, inView } = useInView();
-	const animation = useAnimation();
 	const point = {
 		visible: {
 			transition: {
