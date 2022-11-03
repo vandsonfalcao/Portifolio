@@ -23,14 +23,12 @@ export const Container = styled.div`
 		> div {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: end;
 			&:first-child {
 				flex: 0 70vh;
-				align-items: center;
 			}
 			&:last-child {
 				flex: 0 10vh;
-				align-items: center;
 			}
 
 			> span {
@@ -46,6 +44,9 @@ export const Container = styled.div`
 			}
 		}
 		@media screen and (min-width: 991px) {
+			div {
+				justify-content: center;
+			}
 			h1 {
 				font-size: 4rem;
 			}

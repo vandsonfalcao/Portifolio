@@ -9,8 +9,6 @@ export const MenuBar = styled.nav`
 	justify-content: center;
 	top: 0;
 	left: 0;
-	backdrop-filter: saturate(180%) blur(5px);
-	background: rgba(247, 247, 247, .7);
 	> section {
 		position: absolute;
 		display: flex;
@@ -20,6 +18,8 @@ export const MenuBar = styled.nav`
 		height: 65px;
 	}
 	@media screen and (min-width: 991px) {
+		backdrop-filter: saturate(180%) blur(5px);
+		background: rgba(247, 247, 247, 0.7);
 		> section {
 			display: none;
 		}
@@ -27,23 +27,6 @@ export const MenuBar = styled.nav`
 `;
 
 export const MenuModal = styled.aside`
-	// desktop web
-	@media screen and (min-width: 991px) {
-		height: auto !important;
-		opacity: 1 !important;
-		> div {
-			flex-direction: row !important;
-			> div {
-				display: unset !important;
-				opacity: 1 !important;
-				animation: unset !important;
-				padding: 1rem 0;
-				> a {
-					font-size: 1.25rem !important;
-				}
-			}
-		}
-	}
 	position: absolute;
 	display: flex;
 	justify-content: center;
@@ -51,6 +34,8 @@ export const MenuModal = styled.aside`
 	height: 0vh;
 	opacity: 0;
 	transition: height ease 0.4s, opacity ease-in-out 1s;
+	backdrop-filter: saturate(180%) blur(5px);
+	background: rgba(247, 247, 247, 0.9);
 	&.active {
 		height: 100vh;
 		opacity: 0.98;
@@ -84,7 +69,7 @@ export const MenuModal = styled.aside`
 				}
 				100% {
 					opacity: 1;
-					transform: translateX(50px);
+					transform: translateX(30px);
 				}
 			}
 			@keyframes par-menu {
@@ -94,7 +79,7 @@ export const MenuModal = styled.aside`
 				}
 				100% {
 					opacity: 1;
-					transform: translateX(-50px);
+					transform: translateX(-80px);
 				}
 			}
 			> a {
@@ -102,6 +87,7 @@ export const MenuModal = styled.aside`
 				font-family: var(--f-title);
 				color: var(--black);
 				position: relative;
+				text-shadow: 0px 0px 4px var(--white);
 				&::before {
 					content: "";
 					position: absolute;
@@ -118,6 +104,25 @@ export const MenuModal = styled.aside`
 				&:hover::before {
 					transform-origin: left;
 					transform: scaleX(1);
+				}
+			}
+		}
+	}
+	// desktop web
+	@media screen and (min-width: 991px) {
+		height: auto;
+		opacity: 1;
+		backdrop-filter: unset;
+		background: unset;
+		> div {
+			flex-direction: row;
+			> div {
+				display: unset;
+				opacity: 1;
+				animation: unset !important;
+				padding: 1rem 0;
+				> a {
+					font-size: 1.25rem;
 				}
 			}
 		}

@@ -9,12 +9,15 @@ export const Container = styled.footer`
 	display: flex;
 	justify-content: center;
 	transition: height ease .4s;
+	backdrop-filter: saturate(180%) blur(5px);
+	background: rgba(247, 247, 247, .7);
 	>div{
 		display: flex;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
-		>span{
+		>small{
+			text-align: center;
 			font-family: var(--f-title);
 			font-weight: 400;
 		}

@@ -13,7 +13,6 @@ import { BsChevronDoubleDown } from "react-icons/bs";
 export default function Wellcome() {
 	const { scrollYProgress } = useViewportScroll();
 	const opacity = useTransform(scrollYProgress, [0.015, 0.018], [ 1, 0]);
-	const scale = useTransform(scrollYProgress, [0.015, 0.018, 0.088], [ 1, 3, 0]);
 
 	return (
 		<>
