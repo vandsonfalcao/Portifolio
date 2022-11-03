@@ -15,34 +15,49 @@ export default function InitialLoader() {
 
 	return (
 		<Container
-			initial={{
-				rotate: 0,
-				height: "100vh",
-			}}
-			animate={
-				porcentage > 100 && {
-					rotate: 90,
-					height: "100vw",
-					transition: { duration: 1.5 },
-				}
-			}
-			style={{ display: porcentage > 260 ? "none" : "block" }}
+		// style={{ display: porcentage > 260 ? "none" : "block" }}
 		>
+			{/* bg */}
 			<motion.div
-				initial={{
-					height: "50%",
+				animate={{
+					background: ["var(--white)", "unset"],
+					transition: { duration: 1,delay: 5 },
 				}}
-				animate={porcentage > 100 && { height: 0, transition: { duration: 1, delay: 3 } }}
 			>
-				<section style={{ width: `${porcentage}%` }} />
-			</motion.div>
-			<motion.div
-				initial={{
-					height: "50%",
-				}}
-				animate={porcentage > 100 && { height: 0, transition: { duration: 1, delay: 3 } }}
-			>
-				<section style={{ width: `${porcentage}%` }} />
+				{/* ContainerGates */}
+				<motion.div
+					animate={
+						porcentage > 100 && {
+							rotate: [0, 90, 90],
+							width: ["450%", "450%", "450%"],
+							height: ["100%", "100%", "200%"],
+							transition: { duration: 2 },
+						}
+					}
+				>
+					{/* GateOne */}
+					<motion.div
+						initial={{
+							height: "50%",
+						}}
+						animate={
+							porcentage > 100 && { height: 0, transition: { duration: 1, delay: 3, ease: "easeOut" } }
+						}
+					>
+						<section style={{ width: `${porcentage}%` }} />
+					</motion.div>
+					{/* GateTwo */}
+					<motion.div
+						initial={{
+							height: "50%",
+						}}
+						animate={
+							porcentage > 100 && { height: 0, transition: { duration: 1, delay: 3, ease: "easeOut" } }
+						}
+					>
+						<section style={{ width: `${porcentage}%` }} />
+					</motion.div>
+				</motion.div>
 			</motion.div>
 		</Container>
 	);

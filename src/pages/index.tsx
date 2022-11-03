@@ -6,6 +6,7 @@ import Head from "next/head";
 import { DefaultLayout } from "../components/layout/DefaultLayout";
 import Carrer from "../components/Carrer";
 import Wellcome from "../components/Wellcome";
+import InitialLoader from "../components/InitialLoader";
 
 const Home: NextPage = () => {
 	return (
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
 			<Head>
 				<title>Vandson Falcão · Portfólio</title>
 			</Head>
+			<InitialLoader />
 			<DefaultLayout>
 				<Wellcome />
 				<Carrer />
