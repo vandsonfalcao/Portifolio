@@ -9,6 +9,8 @@ export const MenuBar = styled.nav`
 	justify-content: center;
 	top: 0;
 	left: 0;
+	backdrop-filter: saturate(180%) blur(5px);
+	background: rgba(247, 247, 247, .7);
 	> section {
 		position: absolute;
 		display: flex;
@@ -27,7 +29,6 @@ export const MenuBar = styled.nav`
 export const MenuModal = styled.aside`
 	// desktop web
 	@media screen and (min-width: 991px) {
-		background: linear-gradient(180deg, rgba(247,247,247,1) 85%, transparent 100%);
 		height: auto !important;
 		opacity: 1 !important;
 		> div {
@@ -49,8 +50,7 @@ export const MenuModal = styled.aside`
 	width: 100%;
 	height: 0vh;
 	opacity: 0;
-	transition: height ease .4s, opacity ease-in-out 1s;
-	background: linear-gradient(0deg, rgba(16,3,3,0.7301120277212447) 0%, rgba(227,227,227,1) 35%);
+	transition: height ease 0.4s, opacity ease-in-out 1s;
 	&.active {
 		height: 100vh;
 		opacity: 0.98;

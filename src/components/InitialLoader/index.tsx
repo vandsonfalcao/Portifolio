@@ -15,7 +15,7 @@ export default function InitialLoader() {
 
 	return (
 		<Container
-		// style={{ display: porcentage > 260 ? "none" : "block" }}
+		style={{ display: porcentage > 260 ? "none" : "block" }}
 		>
 			{/* bg */}
 			<motion.div
