@@ -110,7 +110,7 @@ export const MenuModal = styled.aside`
 	}
 	// desktop web
 	@media screen and (min-width: 991px) {
-		height: auto;
+		height: unset !important;
 		opacity: 1;
 		backdrop-filter: unset;
 		background: unset;
