@@ -43,7 +43,9 @@ export default function HistoryPoint({ item, ident, length }: HistoryPointProps)
 					<strong>{item.place}</strong>
 				</motion.p>
 				<motion.span variants={text}>{item.time}</motion.span>
-				<motion.p variants={text}>{item.desc}</motion.p>
+				<motion.p variants={text}>
+					<div dangerouslySetInnerHTML={{ __html: `${item.desc}` }} />
+				</motion.p>
 			</motion.div>
 			{(ident + 2) % 2 === 0 && (
 				<>
