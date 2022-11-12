@@ -21,7 +21,7 @@ export default function InitialLoader() {
 			<motion.div
 				animate={{
 					background: ["var(--white)", "unset"],
-					transition: { duration: 1,delay: 5 },
+					transition: { duration: 1,delay: 5.5 },
 				}}
 			>
 				{/* ContainerGates */}
