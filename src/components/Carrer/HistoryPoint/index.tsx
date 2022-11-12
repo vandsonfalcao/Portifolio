@@ -10,12 +10,12 @@ interface Item {
 	desc: string;
 }
 interface HistoryPointProps {
+	key: number
 	item: Item;
-	ident: number;
 	length: number;
 }
 
-export default function HistoryPoint({ item, ident, length }: HistoryPointProps) {
+export default function HistoryPoint({ item, key, length }: HistoryPointProps) {
 	// Animations
 	const { ref, inView } = useInView();
 	const point = {
@@ -43,14 +43,12 @@ export default function HistoryPoint({ item, ident, length }: HistoryPointProps)
 					<strong>{item.place}</strong>
 				</motion.p>
 				<motion.span variants={text}>{item.time}</motion.span>
-				<motion.p variants={text}>
-					<div dangerouslySetInnerHTML={{ __html: `${item.desc}` }} />
-				</motion.p>
+				<motion.p variants={text} dangerouslySetInnerHTML={{ __html: item.desc }} />
 			</motion.div>
-			{(ident + 2) % 2 === 0 && (
+			{key % 2 !== 0 && (
 				<>
 					<div className="empty"></div>
-					{!(ident + 2 > length) && <div className="empty"></div>}
+					{!(key + 1 > length) && <div className="empty"></div>}
 				</>
 			)}
 		</>
