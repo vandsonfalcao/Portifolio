@@ -12,16 +12,20 @@ export function Menu() {
 	const [isOpen, setIsOpen] = useState(false);
 	const itemMenus = [
 		{
-			text: "Apresentação",
-			link: "#apresentacao",
-		},
-		{
 			text: "Carreira",
 			link: "#carreira",
 		},
 		{
 			text: "Habilidades",
 			link: "#habilidades",
+		},
+		{
+			text: "Trabalhos",
+			link: "#trabalhos",
+		},
+		{
+			text: "Sobre",
+			link: "#sobre",
 		},
 		{
 			text: "Blog",
