@@ -12,7 +12,7 @@ import { BsChevronDoubleDown } from "react-icons/bs";
 
 export default function Wellcome() {
 	const { scrollYProgress } = useViewportScroll();
-	const opacity = useTransform(scrollYProgress, [0.015, 0.018], [ 1, 0]);
+	const opacity = useTransform(scrollYProgress, [0.015, 0.018], [1, 0]);
 
 	return (
 		<>
@@ -35,15 +35,20 @@ export default function Wellcome() {
 						</motion.h1>
 					</motion.div>
 					<div>
-						<motion.span
+						<motion.section
 							style={{ opacity: opacity }}
 							animate={{
 								y: [8, 0, 8],
 								transition: { duration: 1, repeat: Infinity },
 							}}
 						>
-							<BsChevronDoubleDown />
-						</motion.span>
+							<div>
+								<span>Scroll</span>
+							</div>
+							<div>
+								<BsChevronDoubleDown />
+							</div>
+						</motion.section>
 					</div>
 				</motion.div>
 			</Container>

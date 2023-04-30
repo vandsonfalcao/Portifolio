@@ -9,8 +9,9 @@ export const GlobalStyle = createGlobalStyle`
   /*----------------------------Variaveis-------------------------*/
   :root {
 		// Colors
-		--white: 		rgb(247, 247, 247); //#f7f7f7
-		--teal:			rgb(67, 216, 201); //#43d8c9
+		--white: 			rgb(247, 247, 247); //#f7f7f7
+		--white-70: 	rgba(247, 247, 247, 0.7);
+		--teal:				rgb(67, 216, 201); //#43d8c9
 		--purple: 		rgb(149, 56, 158); // #95389e
 		--black:			rgb(16, 3, 3); //#100303
 
@@ -79,7 +80,7 @@ export const GlobalStyle = createGlobalStyle`
 					width: 100%;
 					height: 1px;
 					border-radius: 1px;
-					background: var(--black);
+					background: inherit;
 					bottom: 0;
 					left: 0;
 					transform-origin: right;

@@ -35,7 +35,7 @@ export const MenuModal = styled.aside`
 	opacity: 0;
 	transition: height ease 0.4s, opacity ease-in-out 1s;
 	backdrop-filter: saturate(180%) blur(5px);
-	background: rgba(247, 247, 247, 0.9);
+	background: rgba(247, 247, 247, 0.7);
 	&.active {
 		height: 100vh;
 		opacity: 0.98;

@@ -29,6 +29,9 @@ export const Container = styled.div`
 			}
 			&:last-child {
 				flex: 0 10vh;
+				font-weight: 100;
+				color: var(--purple);
+				font-size: .75rem;
 			}
 
 			> span {
@@ -38,9 +41,6 @@ export const Container = styled.div`
 				font-size: 3rem;
 				line-height: 1;
 				opacity: 0.4;
-			}
-			svg {
-				color: var(--purple);
 			}
 		}
 		@media screen and (min-width: 991px) {
