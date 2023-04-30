@@ -7,6 +7,7 @@ import { DefaultLayout } from "../components/layout/DefaultLayout";
 import Carrer from "../components/Carrer";
 import Wellcome from "../components/Wellcome";
 import InitialLoader from "../components/InitialLoader";
+import Script from "next/script";
 
 const Home: NextPage = () => {
 	return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
 				<Wellcome />
 				<Carrer />
 			</DefaultLayout>
+			<Script src="scripts/scroll.js" />
 		</>
 	);
 };

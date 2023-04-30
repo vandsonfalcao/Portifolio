@@ -17,10 +17,6 @@ export function Footer() {
 			return () => window.removeEventListener("scroll", checkScroll);
 		}
 	}, []);
-
-	useEffect(() => {
-		console.log(isVisible);
-	}, [isVisible]);
 	return (
 		<Container className={isVisible ? "active" : ""}>
 			<div className="responsive-content">
