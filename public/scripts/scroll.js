@@ -1,23 +1,21 @@
 function initiateScrollSmooth(speed, smooth) {
-	const target = document.documentElement || document.body
-
+	const target = document.documentElement
 	var moving = false
-	var pos = target.scrollTop
-	target.addEventListener('wheel', scrolled, { passive: false })
-	function scrolled(e) {
-		e.preventDefault(); // disable default scrolling
+	var position = target.scrollTop
+	target.addEventListener('wheel', function scrolled(event) {
+		event.preventDefault(); // disable default scrolling
 
-		var delta = Math.sign(e.deltaY * -1)
+		var delta = Math.sign(event.deltaY * -1)
 
-		pos += -delta * speed
-		pos = Math.max(0, Math.min(pos, target.scrollHeight - target.clientHeight))
+		position += -delta * speed
+		position = Math.max(0, Math.min(position, target.scrollHeight - target.clientHeight))
 
 		if (!moving) update()
-	}
+	}, { passive: false })
 	function update() {
 		moving = true
 
-		const delta = (pos - target.scrollTop) / smooth
+		const delta = (position - target.scrollTop) / smooth
 
 		target.scrollTop += delta
 
